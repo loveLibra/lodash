@@ -47,6 +47,8 @@ function baseDifference(array, values, iteratee, comparator) {
     const computed = iteratee == null ? value : iteratee(value)
 
     value = (comparator || value !== 0) ? value : 0
+
+    // computed === computed为了判断为值类型
     if (isCommon && computed === computed) {
       let valuesIndex = valuesLength
       while (valuesIndex--) {

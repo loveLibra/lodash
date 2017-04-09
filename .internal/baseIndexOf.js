@@ -14,6 +14,8 @@ import strictIndexOf from './strictIndexOf.js'
 function baseIndexOf(array, value, fromIndex) {
   return value === value
     ? strictIndexOf(array, value, fromIndex)
+
+    // 引用类型 或者 NaN
     : baseFindIndex(array, baseIsNaN, fromIndex)
 }
 
